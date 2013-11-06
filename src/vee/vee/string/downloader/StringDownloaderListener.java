@@ -8,8 +8,6 @@
  * License		:	DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE - Version 2.
  **/
 
-
-
 package vee.vee.string.downloader;
 
 import org.apache.http.impl.client.BasicCookieStore;
@@ -40,7 +38,7 @@ public interface StringDownloaderListener {
     /**
      * <i>Triggered if data fails to download, mostly due to bad/unavailable<b>
      * Internet Connection</b></i><br>
-     *
+     * 
      * @return error message from <b>catch</b><br>
      *         <b>URL : </b> <i>The data failed from URL.</i><br>
      *         <b>URL's Position : </b> <i>Nth of URL, starts from 0.</i><br>
@@ -53,7 +51,7 @@ public interface StringDownloaderListener {
 
     /**
      * <i>Triggered if any error in server side.</i><br>
-     *
+     * 
      * @return error<br>
      *         <b>Status Code : </b> <i>HTTP status code.</i><br>
      *         <b>Status Description : </b> <i>HTTP status code's equivalent
@@ -77,7 +75,7 @@ public interface StringDownloaderListener {
      * <b><i>Result</i></b> - has last fetched result, better when needed to
      * parse and update UI immediately.<br>
      * <br>
-     *
+     * 
      * @see dataDownloadFailed
      */
     void isAllStringsDownloadedSuccessfully(boolean status,

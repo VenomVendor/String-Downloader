@@ -8,61 +8,58 @@
  * License		:	DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE - Version 2.
  **/
 
-
 package vee.vee.string.downloader;
 
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
 
-
 public class StringDownloaderCookieJar {
 
-	BasicCookieStore	cookieStore		= new BasicCookieStore();
-	HttpContext			localContext	= new BasicHttpContext();
+    BasicCookieStore cookieStore = new BasicCookieStore();
+    HttpContext localContext = new BasicHttpContext();
 
-	public BasicCookieStore getCookieStore() {
-		// printCookies();
-		return cookieStore;
-	}
+    public BasicCookieStore getCookieStore() {
+        // printCookies();
+        return cookieStore;
+    }
 
-	public void setCookieStore(BasicCookieStore cookieStore) {
-		this.cookieStore = cookieStore;
-		// Set & Print
-		// printCookies();
-	}
+    public void setCookieStore(BasicCookieStore cookieStore) {
+        this.cookieStore = cookieStore;
+        // Set & Print
+        // printCookies();
+    }
 
-	public HttpContext getLocalContext() {
-		// printLocalContext();
-		return localContext;
-	}
+    public HttpContext getLocalContext() {
+        // printLocalContext();
+        return localContext;
+    }
 
-	public void setLocalContext(HttpContext localContext) {
-		this.localContext = localContext;
-		// Set & Print
-		// printLocalContext();
-	}
+    public void setLocalContext(HttpContext localContext) {
+        this.localContext = localContext;
+        // Set & Print
+        // printLocalContext();
+    }
 
-	@SuppressWarnings ("unused")
-	private void printCookies() {
+    @SuppressWarnings("unused")
+    private void printCookies() {
 
-		System.out.println("COOKIE SIZE SET: "
-				+ cookieStore.getCookies().size());
-		for(int i = 0; i < cookieStore.getCookies().size(); i++) {
+        System.out.println("COOKIE SIZE SET: " + cookieStore.getCookies().size());
+        for (int i = 0; i < cookieStore.getCookies().size(); i++) {
 
-			System.out.println("COOKIES " + i + " :: "
-					+ cookieStore.getCookies().get(i));
+            System.out.println(
+                    "COOKIES " + i + " :: " + cookieStore.getCookies().get(i));
 
-		}
+        }
 
-	}
+    }
 
-	@SuppressWarnings ("unused")
-	private void printLocalContext() {
+    @SuppressWarnings("unused")
+    private void printLocalContext() {
 
-		System.out.println(" ::::::::: " + localContext.hashCode());
-		System.out.println(" ::::::::: " + localContext.toString());
+        System.out.println(" ::::::::: " + localContext.hashCode());
+        System.out.println(" ::::::::: " + localContext.toString());
 
-	}
+    }
 
 }
